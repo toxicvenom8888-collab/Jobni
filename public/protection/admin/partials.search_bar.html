@@ -1,0 +1,24 @@
+<!-- admin/partials/search_bar.html -->
+<!-- Drop this block near the top of your dashboard (e.g., under the controls toolbar). -->
+<form id="visitorSearchForm" class="search-bar" style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px;">
+  <input type="text" name="q" placeholder="Search e.g. ip:1.2.3.4 country:US bot:1 score:30..80 date:2025-08-01..2025-08-17"
+         style="flex:1; min-width:280px; padding:10px 12px; border-radius:10px; border:1px solid #2a3a4a; background:#152234; color:#e6edf3;">
+  <select name="op" style="padding:10px 12px; border-radius:10px; border:1px solid #2a3a4a; background:#152234; color:#e6edf3;">
+    <option value="and" selected>AND</option>
+    <option value="or">OR</option>
+  </select>
+  <input type="date" name="date_from" style="padding:10px 12px; border-radius:10px; border:1px solid #2a3a4a; background:#152234; color:#e6edf3;">
+  <input type="date" name="date_to"   style="padding:10px 12px; border-radius:10px; border:1px solid #2a3a4a; background:#152234; color:#e6edf3;">
+  <input type="number" name="score_min" placeholder="score ≥" min="0" max="100" style="width:100px; padding:10px 12px; border-radius:10px; border:1px solid #2a3a4a; background:#152234; color:#e6edf3;">
+  <input type="number" name="score_max" placeholder="score ≤" min="0" max="100" style="width:100px; padding:10px 12px; border-radius:10px; border:1px solid #2a3a4a; background:#152234; color:#e6edf3;">
+  <button id="visitorSearchSubmit" type="submit" class="control-btn action">
+    <i class="fas fa-search"></i> Search
+  </button>
+  <div id="searchStats" style="margin-left:auto; color:#9fb0c3;"></div>
+</form>
+
+<!-- Pager slot -->
+<div id="visitorSearchPager" style="display:flex; gap:8px; margin:-6px 0 14px 0;"></div>
+
+<!-- Include the JS once on the dashboard page -->
+<script src="visitors_search.js"></script>

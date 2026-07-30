@@ -1,0 +1,214 @@
+.button-container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    width: 500px;
+}
+
+.button {
+    min-width: 80px; /* Minimum width */
+    max-width: 150px; /* Maximum width */
+    height: 30px; /* Fixed height */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    color: #fff; /* Default text color */
+}
+
+.fit-text-button {
+  border: 1px solid #28a745;
+  background-color: #28a745;
+  font-size: 13px;
+  font-weight: 500 !important;
+}
+
+.fit-text-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.error-button {
+    border: 1px solid #dc3545; /* Red border */
+    background-color: #dc3545; /* Red color */
+	font-size: 13px;
+	font-weight: 500 !important;/
+}
+
+.error-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.finish-button {
+    border: 1px solid #5A6F82; /* Subtle blue-gray border */
+    background-color: #5A6F82; /* Blue-gray background color */
+    color: #fff; /* White text for readability */
+	font-size: 13px;
+	font-weight: 500 !important;/
+}
+
+.finish-button:hover {
+    background-color: #4A5D70; /* Darker blue-gray on hover */
+}
+
+.btn-success {
+    min-width: 120px;
+    height: 68px;
+    font-size: 16px;
+}
+
+.dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* General dropdown item styles */
+.dropdown-item {
+    cursor: pointer;
+    background-color: #5c6bc0; /* Default blue background */
+    color: #fff; /* Ensure text is white */
+    padding: 8px;
+    border-radius: 4px;
+    margin: 4px;
+    display: block;
+	  font-size: 13px;
+  font-weight: 500 !important;
+}
+
+.dropdown-item:hover {
+    background-color: #4f5b93; /* Darker blue on hover */
+    color: #fff; /* Ensure text stays white on hover */
+}
+
+/* Yahoo dropdown items (1st to 5th) */
+.dropdown-item:nth-child(1),
+.dropdown-item:nth-child(2),
+.dropdown-item:nth-child(3),
+.dropdown-item:nth-child(4),
+.dropdown-item:nth-child(5),
+.dropdown-item:nth-child(6),
+.dropdown-item:nth-child(7),
+.dropdown-item:nth-child(8),
+.dropdown-item:nth-child(9),
+.dropdown-item:nth-child(10),
+.dropdown-item:nth-child(11) {
+    background-color: #5c6bc0; /* Maintain original color for Yahoo */
+    color: #fff; /* White text for Yahoo items */
+}
+
+.dropdown-item:nth-child(1):hover,
+.dropdown-item:nth-child(2):hover,
+.dropdown-item:nth-child(3):hover,
+.dropdown-item:nth-child(4):hover,
+.dropdown-item:nth-child(5):hover,
+.dropdown-item:nth-child(6):hover,
+.dropdown-item:nth-child(7):hover,
+.dropdown-item:nth-child(8):hover,
+.dropdown-item:nth-child(9):hover,
+.dropdown-item:nth-child(10):hover,
+.dropdown-item:nth-child(11):hover {
+    background-color: #4f5b93; /* Darker blue on hover for Yahoo */
+    color: #fff; /* Keep white on hover */
+}
+
+/* AOL dropdown items (6th to 9th) */
+.dropdown-item:nth-child(12),
+.dropdown-item:nth-child(13),
+.dropdown-item:nth-child(14),
+.dropdown-item:nth-child(15),
+.dropdown-item:nth-child(16),
+.dropdown-item:nth-child(17),
+.dropdown-item:nth-child(18),
+.dropdown-item:nth-child(19),
+.dropdown-item:nth-child(20) {
+    background-color: #00b0ff; /* Bright AOL-style blue for AOL items */
+    color: #fff; /* White text */
+}
+
+.dropdown-item:nth-child(12):hover,
+.dropdown-item:nth-child(13):hover,
+.dropdown-item:nth-child(14):hover,
+.dropdown-item:nth-child(15):hover,
+.dropdown-item:nth-child(16):hover,
+.dropdown-item:nth-child(17):hover,
+.dropdown-item:nth-child(18):hover,
+.dropdown-item:nth-child(19):hover,
+.dropdown-item:nth-child(20):hover {
+    background-color: #0081cb; /* Darker AOL blue on hover */
+    color: #fff; /* Keep white on hover */
+}
+
+
+/* Gmail dropdown items (10th to 12th) */
+.dropdown-item:nth-child(21),
+.dropdown-item:nth-child(22),
+.dropdown-item:nth-child(23),
+.dropdown-item:nth-child(24),
+.dropdown-item:nth-child(25),
+.dropdown-item:nth-child(26),
+.dropdown-item:nth-child(27),
+.dropdown-item:nth-child(28),
+.dropdown-item:nth-child(29) {
+    background-color: #F44336 ; /* Orange for Gmail items */
+    color: #fff; /* White text */
+}
+
+.dropdown-item:nth-child(21):hover,
+.dropdown-item:nth-child(22):hover,
+.dropdown-item:nth-child(23):hover,
+.dropdown-item:nth-child(24):hover,
+.dropdown-item:nth-child(25):hover,
+.dropdown-item:nth-child(26):hover,
+.dropdown-item:nth-child(27):hover,
+.dropdown-item:nth-child(28):hover,
+.dropdown-item:nth-child(29):hover {
+    background-color: #D32F2F ; /* Darker orange on hover */
+    color: #fff; /* Keep white on hover */
+}
+
+
+
+/* iCloud dropdown items (13th to 14th) */
+.dropdown-item:nth-child(30),
+.dropdown-item:nth-child(31),
+.dropdown-item:nth-child(32),
+.dropdown-item:nth-child(33),
+.dropdown-item:nth-child(34),
+.dropdown-item:nth-child(35),
+.dropdown-item:nth-child(36),
+.dropdown-item:nth-child(37),
+.dropdown-item:nth-child(38)
+ {
+    background-color: #009688; /* Grey for iCloud */
+    color: #fff; /* White text */
+}
+
+.dropdown-item:nth-child(30):hover,
+.dropdown-item:nth-child(31):hover,
+.dropdown-item:nth-child(32):hover,
+.dropdown-item:nth-child(33):hover,
+.dropdown-item:nth-child(34):hover,
+.dropdown-item:nth-child(35):hover,
+.dropdown-item:nth-child(36):hover,
+.dropdown-item:nth-child(37):hover,
+.dropdown-item:nth-child(38):hover {
+    background-color: #00796b; /* Darker grey on hover */
+    color: #fff; /* Keep white on hover */
+}
+
+/* Live dropdown items (15th and onwards) */
+.dropdown-item:nth-child(n+39) {
+    background-color: grey; /* Teal for Live */
+    color: #fff; /* White text */
+}
+
+.dropdown-item:nth-child(n+39):hover {
+    background-color: #6c757d; /* Darker teal on hover */
+    color: #fff; /* Keep white on hover */
+}
+
+

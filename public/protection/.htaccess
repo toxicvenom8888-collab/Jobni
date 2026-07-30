@@ -1,0 +1,52 @@
+# ========== GENERAL PROTECTION ==========
+
+# Prevent directory listing
+Options -Indexes
+
+# Disable ETag header (optional, minor privacy improvement)
+FileETag None
+
+# Protect hidden files (.env, .git, .htaccess, etc.)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Deny backup and config files
+<FilesMatch "\.(bak|sql|env|log|ini|sh|inc|old|config)$">
+  Require all denied
+</FilesMatch>
+
+# Block file probing via query string
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{QUERY_STRING} (\.\./|\.\.\\|boot\.ini|etc/passwd|self/environ) [NC]
+  RewriteRule .* - [F]
+</IfModule>
+
+# ========== USER AGENT PROTECTION ==========
+
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase User-Agent "curl" bad_bot
+  SetEnvIfNoCase User-Agent "wget" bad_bot
+  SetEnvIfNoCase User-Agent "python" bad_bot
+  SetEnvIfNoCase User-Agent "libwww" bad_bot
+  SetEnvIfNoCase User-Agent "nmap" bad_bot
+  SetEnvIfNoCase User-Agent "masscan" bad_bot
+  SetEnvIfNoCase User-Agent "HTTrack" bad_bot
+  SetEnvIfNoCase User-Agent "scan" bad_bot
+  SetEnvIfNoCase User-Agent "sqlmap" bad_bot
+  SetEnvIfNoCase User-Agent "bot" bad_bot
+
+  <RequireAll>
+    Require all granted
+    Require not env bad_bot
+  </RequireAll>
+</IfModule>
+
+# ========== SECURITY HEADERS ==========
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+</IfModule>

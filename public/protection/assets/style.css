@@ -1,0 +1,321 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Center the title */
+header h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Group both buttons to the right */
+header .logout-btn {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* Align buttons as a group using flex on header */
+header a.logout-btn:first-of-type {
+    margin-left: auto; /* Push group to right */
+}
+
+
+header .logout-btn:hover {
+    background-color: #d23b3b;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+button.block-btn {
+    background-color: #ff5722;
+}
+
+button.unblock-btn {
+    background-color: #4caf50;
+}
+
+button.authorize-btn {
+    background-color: #2196f3;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Login Page Styles */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 5% auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    background-color: #fdecec;
+    color: #d9534f;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+/* Button Styles */
+button.block-btn {
+    background-color: #f44336;
+}
+
+button.unblock-btn {
+    background-color: #4caf50;
+}
+
+button.delete-btn {
+    background-color: #ff9800;
+}
+
+button.block-btn:hover {
+    background-color: #d32f2f;
+}
+
+button.unblock-btn:hover {
+    background-color: #388e3c;
+}
+
+button.delete-btn:hover {
+    background-color: #f57c00;
+}
+
+/* Improved Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Search Bar Styling */
+#search {
+    width: 300px;
+    padding: 10px;
+    margin: 1rem auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+/* Button Styles */
+button.block-btn {
+    background-color: #f44336;
+}
+
+button.unblock-btn {
+    background-color: #4caf50;
+}
+
+button.delete-btn {
+    background-color: #ff9800;
+}
+
+button.block-btn:hover {
+    background-color: #d32f2f;
+}
+
+button.unblock-btn:hover {
+    background-color: #388e3c;
+}
+
+button.delete-btn:hover {
+    background-color: #f57c00;
+}
+/* Country Selection Section Styling */
+.country-selection {
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#country-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+#selected-countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.country-tag {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.country-tag:hover {
+    background-color: #388e3c;
+}
+
+button.save-btn,
+button.clear-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button.clear-btn {
+    background-color: #f44336;
+}
+
+button.save-btn:hover {
+    background-color: #388e3c;
+}
+
+button.clear-btn:hover {
+    background-color: #d32f2f;
+}
