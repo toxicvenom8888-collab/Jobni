@@ -1,4 +1,4 @@
-if (!process.env.VERCEL) { require('dotenv').config(); }
+try { require('dotenv').config(); } catch(e) {}
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
